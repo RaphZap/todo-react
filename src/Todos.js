@@ -4,8 +4,12 @@ const Todos = ( {todos, deleteTodo} ) => {
     const todoList = todos.length ? (
         todos.map(todo => {
             return (
-                <div onClick={() => {deleteTodo(todo.id)}} className="collection-item" key={todo.id}>
-                    <span>{todo.content}</span>
+                <div className="collection-item whole-item" key={todo.id}>
+                        <span className="todo-content" >{todo.content}</span>
+                        <span onClick={() => {deleteTodo(todo.id)}} 
+                            className="waves-light btn-small red">
+                            <i className="material-icons">delete</i>                        
+                        </span>                    
                 </div>
             )
         })
@@ -18,3 +22,5 @@ const Todos = ( {todos, deleteTodo} ) => {
 }
 
 export default Todos;
+
+// className="right red-text"

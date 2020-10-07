@@ -25,6 +25,8 @@ class AddTodo extends React.Component {
                 <form onSubmit={this.handleSubmit}>
                     <label>Add new todo: </label>
                     <input type="text" onChange={this.handleChange} value={this.state.content}/>
+                    <button onClick={this.handleSubmit} className="btn waves-effect waves-light">Enter
+                    <i className="material-icons right">send</i></button>
                 </form>
             </div>
         );

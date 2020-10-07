@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* .delbtn {
+  bottom: 6.5px;
+  float: right;
+} */
+
+.todo-content {
+  font-size: 20px;
+  width: 93%;
+  text-align: left;
+  /* background-color: #039be5; */  
+  right: 10px;
+  display: inline-block;
+}
+
+.whole-item {
+  border-radius: 10px;
+  /* margin-bottom: 5px; */
+  border-bottom-width: 20px;
+}

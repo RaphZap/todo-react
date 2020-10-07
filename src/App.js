@@ -5,8 +5,8 @@ import AddTodo from './AddTodo';
 class App extends React.Component {
   state = {
      todos : [
-       {id: 1, content: 'buy some milk'},
-       {id: 2, content: 'play mario kart'}
+       {id: 1, content: 'buy some milk', isDone: true},
+       {id: 2, content: 'play mario kart', isDone: false}
      ]
   }
 
@@ -32,7 +32,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="todo-app container">
-        <h1 className="center blue-text">Todo's</h1>
+        <h1 className="center blue-text">My Todo List</h1>
         <Todos todos={this.state.todos} deleteTodo={this.deleteTodo}/>
         <AddTodo addTodo={this.addTodo}/>
       </div>
