@@ -5,8 +5,9 @@ import AddTodo from './AddTodo';
 class App extends React.Component {
   state = {
      todos : [
-       {id: 1, content: 'buy some milk', isDone: true},
-       {id: 2, content: 'play mario kart', isDone: false}
+       {id: 1, content: 'mark items as finished', isDone: true},
+       {id: 2, content: 'add a database', isDone: false},
+       {id: 3, content: 'confirm deletion of item', isDone: false}
      ]
   }
 
@@ -25,15 +26,25 @@ class App extends React.Component {
     let todos = [...this.state.todos, todo];
     this.setState({
       todos
-    })
-    console.log(this.state);
+    });
+    // console.log(this.state);
+  }
+
+  markTodo = (id) => {  
+    let todos = this.state.todos;
+    let index = todos.findIndex( x => x.id === id);
+    todos[index].isDone = !todos[index].isDone;
+    this.setState({
+      todos
+    });
+    console.log(todos);
   }
 
   render() {
     return (
       <div className="todo-app container">
         <h1 className="center blue-text">My Todo List</h1>
-        <Todos todos={this.state.todos} deleteTodo={this.deleteTodo}/>
+        <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} markTodo={this.markTodo}/>
         <AddTodo addTodo={this.addTodo}/>
       </div>
     );

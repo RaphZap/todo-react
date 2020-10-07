@@ -1,15 +1,25 @@
 import React from 'react';
 
-const Todos = ( {todos, deleteTodo} ) => {
+const Todos = ( {todos, deleteTodo, markTodo} ) => {
     const todoList = todos.length ? (
         todos.map(todo => {
             return (
                 <div className="collection-item whole-item" key={todo.id}>
-                        <span className="todo-content" >{todo.content}</span>
-                        <span onClick={() => {deleteTodo(todo.id)}} 
-                            className="waves-light btn-small red">
-                            <i className="material-icons">delete</i>                        
-                        </span>                    
+                        <div className="todo-content">
+                            {!todo.isDone ? todo.content : <strike>{todo.content}</strike>}
+                        </div>
+                        <span>
+                            <span onClick={() => {markTodo(todo.id)}} 
+                                className="waves-light btn-small green my-btns">
+                                <i className="material-icons">
+                                    {todo.isDone ? 'check_box' : 'check_box_outline_blank'}
+                                </i>                        
+                            </span>  
+                            <span onClick={() => {deleteTodo(todo.id)}} 
+                                className="waves-light btn-small red my-btns">
+                                <i className="material-icons">delete</i>                        
+                            </span>                    
+                        </span>
                 </div>
             )
         })
