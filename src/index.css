@@ -5,11 +5,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-color: #ffd7005e; */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.todos {
+  
 }
 
 .todo-content {
@@ -18,7 +23,11 @@ code {
 
 .whole-item {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;  
+}
+
+.collection .collection-item, .whole-item {
+  /* background-color: blanchedalmond; */
 }
 
 .my-btns {
