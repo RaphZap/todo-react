@@ -12,6 +12,7 @@ class App extends React.Component {
   }
 
   deleteTodo = (id) => {
+    alert('Items will be permanently deleted! Are you sure you want to delete?');
     const todos = this.state.todos.filter(todo => {
       return todo.id !== id
     });
