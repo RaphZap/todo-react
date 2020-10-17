@@ -12,13 +12,16 @@ class App extends React.Component {
   }
 
   deleteTodo = (id) => {
-    alert('Items will be permanently deleted! Are you sure you want to delete?');
-    const todos = this.state.todos.filter(todo => {
-      return todo.id !== id
-    });
-    this.setState({
-      todos
-    })
+    if (window.confirm('Todo item will be permanently deleted! Are you sure you want to delete?')) {
+      const todos = this.state.todos.filter(todo => {
+        return todo.id !== id
+      });
+      this.setState({
+        todos
+      });
+    } else {
+      // not deleted
+    }
   }
 
   addTodo = (todo) => {
