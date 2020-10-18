@@ -13,10 +13,6 @@ code {
     monospace;
 }
 
-.todos {
-  
-}
-
 .todo-content {
   font-size: 20px;
 }
@@ -28,8 +24,4 @@ code {
 
 .collection .collection-item, .whole-item {
   /* background-color: blanchedalmond; */
-}
-
-.my-btns {
-
 }
