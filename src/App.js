@@ -20,7 +20,7 @@ class App extends React.Component {
         todos
       });
     } else {
-      // not deleted
+      // return
     }
   }
 

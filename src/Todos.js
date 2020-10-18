@@ -15,10 +15,10 @@ const Todos = ( {todos, deleteTodo, markTodo} ) => {
                                     {todo.isDone ? 'check_box' : 'check_box_outline_blank'}
                                 </i>                        
                             </span>  
-                            <span onClick={() => {deleteTodo(todo.id)}} 
-                                className="waves-light btn-small red my-btns">
+                            <button onClick={() => {deleteTodo(todo.id)}} 
+                                className="waves-light btn-small red">
                                 <i className="material-icons">delete</i>                        
-                            </span>                    
+                            </button>                    
                         </span>
                 </div>
             )
